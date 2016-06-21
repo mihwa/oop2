@@ -9,12 +9,12 @@ public class KaupController {
 				
 				Kaup k=new Kaup();//
 				while (true) {
-					switch (JOptionPane.showInputDialog("1:실행 0:종료")) {
+					switch (JOptionPane.showInputDialog("1: 0:")) {
 					case "1":
 						
-						String name=JOptionPane.showInputDialog("이름");
-						String height=JOptionPane.showInputDialog("키");
-						String weight=JOptionPane.showInputDialog("몸무게");
+						String name=JOptionPane.showInputDialog("");
+						String height=JOptionPane.showInputDialog("");
+						String weight=JOptionPane.showInputDialog("");
 						k.setName(name);
 						k.setHeight(height);
 						k.setWeight(weight);

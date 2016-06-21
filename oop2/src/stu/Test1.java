@@ -1,4 +1,4 @@
-package kumkum;
+package stu;
 
 import javax.swing.JOptionPane;
 

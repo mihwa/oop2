@@ -11,53 +11,69 @@ import org.omg.Messaging.SyncScopeHelper;
  * @date   :2016. 6. 10.
  * @author :CHOI MIHWA
  * @file   :kaup.java
- * @story  :Ä«¿ìÇªÁö¼ö ¿Ï¼º
+ * @story  :
 */
 public class kaup3 {
-	public static void main(String[] args) { 
-				Scanner scanner=new Scanner(System.in); 
-				String name="",result=""; 
-		 		double bmi=0.0,height=0.0,weight=0.0,kaup=0.0; 
-		 		 
-		 		//----op 
-		 	System.out.println("ÀÌ¸§?"); 
-		 	name=scanner.next(); 
-		 	 
-		 	System.out.println("Å°?"); 
-		 	height=scanner.nextDouble(); 
-		 	 
-		 	System.out.println("¸ö¹«°Ô?"); 
-		 	weight=scanner.nextDouble(); 
-		 	 
-		 
-		 	kaup=((weight/height)/100)/(height/100); 
-		 
-		 
-			 
-		 		// 
-		 	if (kaup<18.5) { 
-	 		result="ÀúÃ¼Áß"; 
-			 
-		 	}else if (kaup>18.4 && kaup<23) { 
-	 		result="Á¤»óÃ¼Áß"; 
-	 		 
-		 	}else if (kaup>23 && kaup<25) { 
-	 	    result="À§ÇèÃ¼Áß"; 
-		 		 
-	 	}else if (kaup>25&&kaup<30) { 
-	 		result="ºñ¸¸1´Ü°è"; 
-		 		 
-	 	}else if (kaup>30&&kaup<40) { 
-			result="ºñ¸¸2´Ü°è"; 
-	 	 
-	 	}else if (kaup>=40) { 
-		 		result="ºñ¸¸3´Ü°è"; 
-		 	} 
-		 	//double d=Double.parseDouble(String.format("%.2f",kaup)); 
-	 		 
-	 		// * *System.out.println(name+"ÀÇ BMIÁö¼ö´Â "+d+"ÀÌ°í,+"+result+"ÀÌ´Ù");" 
-		 				//(Á¤¼ö´Â%d,¹®ÀÚ´Â%s,¼Ò¼öÁ¡Àº%f)- À§¹®ÀåÀ»printf·Î º¯°æÇÏ½Ã¿À //?():; 
-		 
-		 
-		 		System.out.printf("%sÀÇ BMIÁö¼ö:+%.2f,ÀÌ°í%s"); 
-		 } }
+	String name, height, weight;
+
+	public void setName(String name) {// write
+		this.name = name;
+	}
+
+	public void setheight(String height) {
+		this.height = height;
+	}
+
+	public void setweight(String weight) {
+		this.weight = weight;
+	}
+
+	public String getName() {
+		return this.name;
+
+	}
+
+	public String getHeight() {
+		return this.height;
+	}
+
+	public String getWeight() {
+		return this.weight;
+	}
+
+public void execute() { 
+//------------------init----------------------------- 
+
+String result=""; 
+double bmi = 0.0, height = Double.parseDouble(this.height),  
+					weight = Double.parseDouble(this.weight); 
+							 
+//------------------op------------------------------ 
+
+
+bmi = weight / (height/100) / (height/100); 
+
+if (bmi < 18.5) { 
+result = "ì €ì²´ì¤‘"; 
+} else if(18.5<=bmi && bmi <= 22.9){ 
+	 
+	result = "ì •ìƒì²´ì¤‘"; 
+} else if(bmi >= 23.0 && bmi <= 24.9){ 
+	 
+	result = "ìœ„í—˜ì²´ì¤‘"; 
+} else if(bmi >= 25.0 && bmi <= 29.9){ 
+	 
+	result = "ë¹„ë§Œ 1ë‹¨ê³„"; 
+} else if(bmi >= 30.0 && bmi <= 39.9){ 
+	 
+	result = "ë¹„ë§Œ 2ë‹¨ê³„"; 
+} else if(bmi >= 40){ 
+	 
+result = "ë¹„ë§Œ 3ë‹¨ê³„"; 
+}
+}}
+
+// double d = Double.parseDouble(String.format("%.2f", bmi));
+// return name+"ë‹˜ì€ BMIì§€ìˆ˜ëŠ” "+ d +
+// "ì´ê³ , "+result+"ì´ë‹¤ ";
+	
