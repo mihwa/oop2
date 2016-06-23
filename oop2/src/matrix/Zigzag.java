@@ -12,6 +12,7 @@ public class Zigzag {
 					k++;
 				}
 			} else {
+				
 					//여기를 채우시오(for-loop)
 				}
 			}//여기를 채우시오(flag값 방향전환)
