@@ -12,10 +12,14 @@ public class Zigzag {
 					k++;
 				}
 			} else {
-				
+				for (j =4; j >=0; j--) {
+					mtx[i][j]=k;
+					k++;
+				}
 					//여기를 채우시오(for-loop)
 				}
-			}//여기를 채우시오(flag값 방향전환)
+			}
+		flag*=-1;//여기를 채우시오(flag값 방향전환)
 		
 		for ( j = 0; i < 5; i++) {
 			for (j = 0; j < 5; j++) {

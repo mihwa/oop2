@@ -18,10 +18,10 @@ package matrix;
 						System.out.println();
 						
 					}
-					System.out.println();
 
 			}
 			
+				
 	}
 		
 		
