@@ -1,5 +1,5 @@
 package lotto;
-
+//
 import java.util.Random;
 
 public class LottoBean {
@@ -18,8 +18,7 @@ public class LottoBean {
 			return number;
 		}
 
-		public void setNumber() {//은닉화로인해 return값
-			Random random = new Random();//1번 bean부터로또를 구성하는 램덤숫자 하나발생//ctrl+shift+o
+		public void setNumber() {
 			this.number= (int) ((Math.random()*45)+1);//
 		}
 

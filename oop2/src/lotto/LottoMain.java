@@ -13,6 +13,7 @@ public class LottoMain {
 		int a =lot.getMoney();//set 리턴방식이올수없다는 걸 기억하고
 		LottoService service = new LottoServiceImpl();
 		StringBuffer buf = new StringBuffer();		
+		
 		String input=JOptionPane.showInputDialog("얼마치구입?");
 		lot.setMoney(Integer.parseInt(input));   //lot.getMoney()//5800원이라면 1000원이니까 5줄산것
 		service.setLottos(lot);  //박스에 담아보내는것 같이 보안_call by refarance

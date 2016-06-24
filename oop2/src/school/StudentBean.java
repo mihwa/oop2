@@ -2,9 +2,12 @@ package school;
  //
 
 	public class StudentBean {
-	private String id, pw, gender, name, regDate, ssn;//변수
+	private String id, pw, gender, name, regDate, ssn;//변수..
 	private int age, year;
 	
+	public StudentBean() {
+		// TODO Auto-generated constructor stub
+	}
 	public StudentBean(String id,String pw,String name,String ssn) {
 		this.id=id;
 		this.pw=pw;
@@ -65,8 +68,8 @@ package school;
 	}
 	@Override
 	public String toString() {
-		return "Student2 [id=" + id + ", pw=" + pw + ", gender=" + gender + ", name=" + name + ", regDate=" + regDate
-				+ ", ssn=" + ssn + ", age=" + age + ", year=" + year + "]";
+		return "학생 [아이디=" + id + ", 패스워드=" + pw + ", 성별=" + gender + ", 이름=" + name + ", 등록일=" + regDate
+				+ ", 주민번호=" + ssn + ", 나이=" + age + ", 년도=" + year + "]";
 	}
 	
 	}

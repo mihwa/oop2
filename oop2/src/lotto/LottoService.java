@@ -6,4 +6,6 @@ public interface LottoService {
 	public boolean isDuPlication(int count,int num);
 	public void sort (int []arr);
 	int count(LottoBean lot);
+	
+	
 }
