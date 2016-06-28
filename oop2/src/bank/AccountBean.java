@@ -12,6 +12,10 @@ public class AccountBean { //default constructor 기본생성자_생성자는 �
 	private String id;
 	public final static String BANK_NAME="한빛은행"; 
 	
+	public AccountBean() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public AccountBean(String name,String id,String pw) {
 		this.accountNo = (int) ((Math.random()*999999)+100000);       
 		this.name = name;
@@ -31,6 +35,11 @@ public class AccountBean { //default constructor 기본생성자_생성자는 �
 	public void setId(String id) {
 		this.id = id;
 	}
+	public void setName(String name){
+		this.name=name;
+	}
+	public void setAccountNo(){
+	this.accountNo=(int) ((Math.random()*999999)+100000); }   
 	
 	public int getaccountNo() {
 		return this. accountNo;
@@ -52,13 +61,9 @@ public class AccountBean { //default constructor 기본생성자_생성자는 �
 	
 	
 	@Override
-	public String toString() {//메소드 오버라이딩(재 정의)
-		return MyConstants.BANK_NAME +" [계좌번호=" + accountNo 
-				+ ", 이름=" + name 
-				+ ", 잔액=" + money 
-				+ ", 비번=" + pw 
-				+ ",아이디=" + id
-				+ "]";
+	public String toString() {
+		return "AccountBean [accountNo=" + accountNo + ", name=" + name + ", money=" + money + ", pw=" + pw + ", id="
+				+ id + "]";
 	}
 	
 

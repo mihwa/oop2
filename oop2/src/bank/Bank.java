@@ -3,7 +3,6 @@ package bank;
 
 public class Bank {
 		 
-	
 			private int account; // 인스턴스 변수는 초기화를 하지 않는다. 
 			private String name; 
 			private int money; 
